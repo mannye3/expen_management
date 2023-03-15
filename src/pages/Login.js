@@ -1,46 +1,85 @@
-import React, {Component} from 'react';
+import React, { useState } from "react";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
-class Login extends React.Component{
-    render(){
-        return(
+function Login() {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const history = useHistory();
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      const user = {
+        email: email,
+        password: password,
+      };
+      axios.post("http://127.0.0.1:8000/api/login", user).then((response) => {
+        console.log(response.data);
+        history.push("/"); // redirect to home page
+        
+      });
+      
+    };
+   
+
+    return (
             <div>
                 	 
-	
-                     <section class="welcome-page sec-padding pb-150px p-relative o-hidden bg-gray h-auto">
-		  <div class="container">
-			  <div class="row welcome-text sec-padding flex-center">
-				  <div class="col-md-6 mb-50px">
-					  <img alt="img" src="assets/images/kl.png" class="ml-auto mr-auto"/>
-				  </div>
-				  <div class="col-md-6">
-					  <h1>Log in Now</h1>
-					  <p class="mb-50px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-					  <form id="log-in" class="mt-30px mb-20px">
-						  <div class="form-group p-relative">
-							  <input type="email" placeholder="Your Email" required class="d-block mb-20px"/>
-							  <i class="fa fa-envelope fs-20 color-blue p-absolute"></i> 
-						  </div>
-						  <div class="form-group p-relative">
-							  <input type="password" placeholder="Your Password" required class="d-block mb-20px"/>
-							  <i class="fa fa-lock fs-20 color-blue p-absolute"></i> 
-						  </div>
-						  <button role="button" class="main-btn btn-3 before-gray">Log In</button>
-					  </form>
-					  <a href="register-page.html" class="float-left mb-10px">Not a member? Sign up</a>
-					  <a href="lost-password-page.html" class="float-right">Forget my password</a>
-				  </div>
-			  </div>
-		  </div>
-		  <div class="pattern p-absolute">
-		  </div>
-	  </section>
+					 <div class="nk-content ">
+                    <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
+                        <div class="brand-logo pb-4 text-center">
+                            
+                        </div>
+                        <div class="card card-bordered">
+                            <div class="card-inner card-inner-lg">
+                                <div class="nk-block-head">
+                                    <div class="nk-block-head-content">
+                                        <h4 class="nk-block-title">Sign-In</h4>
+                                        <div class="nk-block-des">
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                                <form onSubmit={handleSubmit}>
+                                    <div class="form-group">
+                                        <div class="form-label-group">
+                                            <label class="form-label" for="default-01">Email</label>
+                                        </div>
+                                        <div class="form-control-wrap">
+                                            <input type="text"  value={email}
+                                             onChange={(event) => setEmail(event.target.value)} class="form-control form-control-lg" id="default-01"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                       
+                                        <div class="form-control-wrap">
+                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                                <em class="passcode-icon icon-show icon ni ni-eye"></em>
+                                                <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
+                                            </a>
+                                            <input  class="form-control form-control-lg" id="password" type="password"
+                                                  value={password}
+                                                     onChange={(event) => setPassword(event.target.value)}/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+                                    </div>
+                                </form>
+                                
+                               
+                            
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
 	 
 	  
 	 
             </div>
-        )
-    }
+  );
 }
 
-
-export default Login 
+export default Login;
