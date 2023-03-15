@@ -48,7 +48,7 @@ function Home() {
       const formdata = new FormData();
       formdata.append('excel_file', formData.excel_file);
 
-      const response = await axios.post('http://127.0.0.1:8000/api/upload-excel', formdata, {
+       await axios.post('http://127.0.0.1:8000/api/upload-excel', formdata, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -79,7 +79,7 @@ function Home() {
       formdata.append('comment', formData.comment);
       formdata.append('image', formData.image);
 
-      const response = await axios.post('http://127.0.0.1:8000/api/addexpenses', formdata, {
+     await axios.post('http://127.0.0.1:8000/api/addexpenses', formdata, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
