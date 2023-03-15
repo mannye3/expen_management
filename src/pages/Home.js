@@ -3,6 +3,7 @@ import axios from "axios";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {  Modal, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 function Home() {
   const [formData, setFormData] = useState({
     expense_date: '',
@@ -152,7 +153,7 @@ axios.get("http://127.0.0.1:8000/api/expenses").then(response => {
                 <div class="container-fluid">
                     <div class="nk-header-wrap">
                         <div class="nk-menu-trigger mr-sm-2 d-lg-none">
-                            <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-menu"></em></a>
+                            <Link to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-menu"></em></Link>
                         </div>
                         <div class="nk-header-brand">
                             <a href="#" class="logo-link">
@@ -167,7 +168,7 @@ axios.get("http://127.0.0.1:8000/api/expenses").then(response => {
                                     </a>
                                 </div>
                                 <div class="nk-menu-trigger mr-n2">
-                                    <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-arrow-left"></em></a>
+                                    <Link to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-arrow-left"></em></Link>
                                 </div>
                             </div>
                            
@@ -176,20 +177,20 @@ axios.get("http://127.0.0.1:8000/api/expenses").then(response => {
                             <ul class="nk-quick-nav">
                                 
                                 <li class="dropdown user-dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <Link to="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <div class="user-toggle">
                                             <div class="user-avatar sm">
                                                 <em class="icon ni ni-user-alt"></em>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                     <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-menu-s1 is-light">
                                        
                                        
                                       
                                         <div class="dropdown-inner">
                                             <ul class="link-list">
-                                                <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                                <li><Link to="#"><em class="icon ni ni-signout"></em><span>Sign out</span></Link></li>
                                             </ul>
                                         </div>
                                     </div>
