@@ -49,7 +49,7 @@ function Home() {
       const formdata = new FormData();
       formdata.append('excel_file', formData.excel_file);
 
-       await axios.post('  http://react.ailesgroup.com/api/upload-excel', formdata, {
+       await axios.post('  https://react.ailesgroup.com/api/upload-excel', formdata, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -80,7 +80,7 @@ function Home() {
       formdata.append('comment', formData.comment);
       formdata.append('image', formData.image);
 
-     await axios.post('http://react.ailesgroup.com/api/addexpenses', formdata, {
+     await axios.post('https://react.ailesgroup.com/api/addexpenses', formdata, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -528,7 +528,7 @@ axios.get("http://react.ailesgroup.com/api/expenses").then(response => {
                                        
                                         </div>
                                         <div class="col-4">
-                                        <img src={`http://react.ailesgroup.com/documents/${selectedRow.image}`} alt={selectedRow.merchant} />
+                                        <img src={`https://react.ailesgroup.com/documents/${selectedRow.image}`} alt={selectedRow.merchant} />
                                             </div>
                                         
                                     </div>

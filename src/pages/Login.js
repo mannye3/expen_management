@@ -14,7 +14,7 @@ function Login() {
         email: email,
         password: password,
       };
-      axios.post("http://react.ailesgroup.com/api/login", user).then((response) => {
+      axios.post("https://react.ailesgroup.com/api/login", user).then((response) => {
         console.log(response.data);
         history.push("/expense"); // redirect to home page
         
