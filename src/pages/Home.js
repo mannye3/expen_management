@@ -156,16 +156,16 @@ axios.get("http://127.0.0.1:8000/api/expenses").then(response => {
                             <Link to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-menu"></em></Link>
                         </div>
                         <div class="nk-header-brand">
-                            <a href="#" class="logo-link">
+                            <Link to="#" class="logo-link">
                             <h3>Expense Manager</h3> 
-                            </a>
+                            </Link>
                         </div>
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <div class="nk-header-mobile">
                                 <div class="nk-header-brand">
-                                    <a href="#" class="logo-link">
+                                    <Link href="#" class="logo-link">
                                    <h3>Expense Manager</h3> 
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div class="nk-menu-trigger mr-n2">
                                     <Link to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-arrow-left"></em></Link>
@@ -268,7 +268,7 @@ axios.get("http://127.0.0.1:8000/api/expenses").then(response => {
                                     
                                     <div class="nk-block-head-content">
                                         <div class="toggle-wrap nk-block-tools-toggle">
-                                            <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
+                                            <Link to="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></Link>
                                             <div class="toggle-expand-content" data-content="pageMenu">
                                                 <ul class="nk-block-tools g-3">
                                                     <li>
@@ -281,8 +281,8 @@ axios.get("http://127.0.0.1:8000/api/expenses").then(response => {
                                                     </li>
                                                    
                                                     <li class="nk-block-tools-opt">
-                                                        <a href="#" data-target="addProduct" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
-                                                        <a href="#" data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span> Add Expense</span></a>
+                                                        <Link to="#" data-target="addProduct" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></Link>
+                                                        <Link to="#" data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span> Add Expense</span></Link>
                                                     </li>
                                                 </ul>
                                             </div>
