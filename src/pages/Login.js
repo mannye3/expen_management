@@ -11,12 +11,12 @@ function Login() {
     const handleSubmit = (event) => {
       event.preventDefault();
       const user = {
-        email: email,
-        password: password,
+        email: 'test@site.com',
+        password: 123456,
       };
       axios.post("http://127.0.0.1:8000/api/login", user).then((response) => {
         console.log(response.data);
-        history.push("/"); // redirect to home page
+        history.push("/expense"); // redirect to home page
         
       });
       
@@ -47,7 +47,7 @@ function Login() {
                                             <label class="form-label" for="default-01">Email</label>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <input type="text"  value={email}
+                                            <input type="text" readOnly  value='test@site.com'
                                              onChange={(event) => setEmail(event.target.value)} class="form-control form-control-lg" id="default-01"/>
                                         </div>
                                     </div>
@@ -55,8 +55,8 @@ function Login() {
                                        
                                         <div class="form-control-wrap">
                                            
-                                            <input  class="form-control form-control-lg" id="password" type="password"
-                                                  value={password}
+                                            <input readOnly  class="form-control form-control-lg" id="password" type="password"
+                                                  value="123456"
                                                      onChange={(event) => setPassword(event.target.value)}/>
                                         </div>
                                     </div>
