@@ -4,15 +4,15 @@ import {  useHistory } from "react-router-dom";
 
 function Login() {
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("test@site.com");
+    const [password, setPassword] = useState("123456");
     const history = useHistory();
   
     const handleSubmit = (event) => {
       event.preventDefault();
       const user = {
-        email: 'test@site.com',
-        password: 123456,
+        email: email,
+        password: password,
       };
       axios.post("http://127.0.0.1:8000/api/login", user).then((response) => {
         console.log(response.data);
@@ -47,7 +47,7 @@ function Login() {
                                             <label class="form-label" for="default-01">Email</label>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <input type="text" readOnly  value='test@site.com'
+                                            <input type="text"  value={email}
                                              onChange={(event) => setEmail(event.target.value)} class="form-control form-control-lg" id="default-01"/>
                                         </div>
                                     </div>
@@ -55,8 +55,8 @@ function Login() {
                                        
                                         <div class="form-control-wrap">
                                            
-                                            <input readOnly  class="form-control form-control-lg" id="password" type="password"
-                                                  value="123456"
+                                            <input  class="form-control form-control-lg" id="password" type="password"
+                                                  value={password}
                                                      onChange={(event) => setPassword(event.target.value)}/>
                                         </div>
                                     </div>
