@@ -105,7 +105,7 @@ function Home() {
   }, []);
 
 const fetchData = () => {
-axios.get("http://react.ailesgroup.com/api/expenses").then(response => {
+axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
   setTableData(response.data);
 });
 
