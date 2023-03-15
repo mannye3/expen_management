@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 function Login() {
 
@@ -54,10 +54,7 @@ function Login() {
                                     <div class="form-group">
                                        
                                         <div class="form-control-wrap">
-                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
-                                                <em class="passcode-icon icon-show icon ni ni-eye"></em>
-                                                <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
-                                            </a>
+                                           
                                             <input  class="form-control form-control-lg" id="password" type="password"
                                                   value={password}
                                                      onChange={(event) => setPassword(event.target.value)}/>
