@@ -47,7 +47,7 @@ function Login() {
                                             <label class="form-label" for="default-01">Email</label>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <input type="text"  value={email}
+                                            <input readOnly type="text"  value={email}
                                              onChange={(event) => setEmail(event.target.value)} class="form-control form-control-lg" id="default-01"/>
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@ function Login() {
                                        
                                         <div class="form-control-wrap">
                                            
-                                            <input  class="form-control form-control-lg" id="password" type="password"
+                                            <input readOnly  class="form-control form-control-lg" id="password" type="password"
                                                   value={password}
                                                      onChange={(event) => setPassword(event.target.value)}/>
                                         </div>
