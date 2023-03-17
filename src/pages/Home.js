@@ -153,12 +153,12 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                 <div class="container-fluid">
                     <div class="nk-header-wrap">
                         <div class="nk-menu-trigger mr-sm-2 d-lg-none">
-                            <a to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-menu"></em></a>
+                            <Link to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-menu"></em></Link>
                         </div>
                         <div class="nk-header-brand">
-                            <a to="#" class="logo-a">
+                            <Link to="#" class="logo-a">
                             <h3>Expense Manager</h3> 
-                            </a>
+                            </Link>
                         </div>
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <div class="nk-header-mobile">
