@@ -163,12 +163,12 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <div class="nk-header-mobile">
                                 <div class="nk-header-brand">
-                                    <a href="#" class="logo-a">
+                                
                                    <h3>Expense Manager</h3> 
-                                    </a>
+                                   
                                 </div>
                                 <div class="nk-menu-trigger mr-n2">
-                                    <a to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-arrow-left"></em></a>
+                                    <Link to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-arrow-left"></em></Link>
                                 </div>
                             </div>
                            
@@ -177,20 +177,20 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                             <ul class="nk-quick-nav">
                                 
                                 <li class="dropdown user-dropdown">
-                                    <a to="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <Link to="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <div class="user-toggle">
                                             <div class="user-avatar sm">
                                                 <em class="icon ni ni-user-alt"></em>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                     <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-menu-s1 is-light">
                                        
                                        
                                       
                                         <div class="dropdown-inner">
                                             <ul class="a-list">
-                                                <li><a to="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                                <li><Link to="#"><em class="icon ni ni-signout"></em><span>Sign out</span></Link></li>
                                             </ul>
                                         </div>
                                     </div>
