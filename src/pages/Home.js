@@ -3,7 +3,7 @@ import axios from "axios";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {  Modal, Button } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { a, Link } from "react-router-dom";
 function Home() {
   const [formData, setFormData] = useState({
     expense_date: '',
@@ -153,22 +153,22 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                 <div class="container-fluid">
                     <div class="nk-header-wrap">
                         <div class="nk-menu-trigger mr-sm-2 d-lg-none">
-                            <Link to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-menu"></em></Link>
+                            <a to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-menu"></em></a>
                         </div>
                         <div class="nk-header-brand">
-                            <Link to="#" class="logo-link">
+                            <a to="#" class="logo-a">
                             <h3>Expense Manager</h3> 
-                            </Link>
+                            </a>
                         </div>
                         <div class="nk-header-menu ml-auto" data-content="headerNav">
                             <div class="nk-header-mobile">
                                 <div class="nk-header-brand">
-                                    <Link href="#" class="logo-link">
+                                    <a href="#" class="logo-a">
                                    <h3>Expense Manager</h3> 
-                                    </Link>
+                                    </a>
                                 </div>
                                 <div class="nk-menu-trigger mr-n2">
-                                    <Link to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-arrow-left"></em></Link>
+                                    <a to="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="headerNav"><em class="icon ni ni-arrow-left"></em></a>
                                 </div>
                             </div>
                            
@@ -177,20 +177,20 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                             <ul class="nk-quick-nav">
                                 
                                 <li class="dropdown user-dropdown">
-                                    <Link to="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <a to="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <div class="user-toggle">
                                             <div class="user-avatar sm">
                                                 <em class="icon ni ni-user-alt"></em>
                                             </div>
                                         </div>
-                                    </Link>
+                                    </a>
                                     <div class="dropdown-menu dropdown-menu-md dropdown-menu-right dropdown-menu-s1 is-light">
                                        
                                        
                                       
                                         <div class="dropdown-inner">
-                                            <ul class="link-list">
-                                                <li><Link to="#"><em class="icon ni ni-signout"></em><span>Sign out</span></Link></li>
+                                            <ul class="a-list">
+                                                <li><a to="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -265,10 +265,10 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                                     <div class="nk-block-head-content">
                                         <h3 class="nk-block-title page-title">Expenses</h3>
                                     </div>
-                                    
+
                                     <div class="nk-block-head-content">
                                         <div class="toggle-wrap nk-block-tools-toggle">
-                                            <Link to="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></Link>
+                                            <Link  class="btn  btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></Link>
                                             <div class="toggle-expand-content" data-content="pageMenu">
                                                 <ul class="nk-block-tools g-3">
                                                     <li>
@@ -281,8 +281,8 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                                                     </li>
                                                    
                                                     <li class="nk-block-tools-opt">
-                                                        <Link to="#" data-target="addProduct" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></Link>
-                                                        <Link to="#" data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span> Add Expense</span></Link>
+                                                        <a to="#" data-target="addProduct" class="toggle btn btn-icon btn-primary d-md-none"><em class="icon ni ni-plus"></em></a>
+                                                        <Link data-target="addProduct" class="toggle btn btn-primary d-none d-md-inline-flex"><em class="icon ni ni-plus"></em><span> Add Expense</span></Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -346,10 +346,10 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                                 </div>
                                     <ul class="nav nav-tabs">
                                     <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#tabItem1">Add Expense</a>
+                                        <a class="nav-a active" data-toggle="tab" href="#tabItem1">Add Expense</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#tabItem2">Import CSV</a>
+                                        <a class="nav-a" data-toggle="tab" href="#tabItem2">Import CSV</a>
                                     </li>
                                     
                                 </ul>
@@ -443,8 +443,6 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                                     </div>
                                     </div>
                                 </div>
-                                  
-
                                         <div class="col-12">
                                             <button type="submit" class="btn btn-primary"><em class="icon ni ni-plus"></em><span> Submit</span></button>
                                         </div>
@@ -530,7 +528,6 @@ axios.get("https://react.ailesgroup.com/api/expenses").then(response => {
                                         <div class="col-4">
                                         <img src={`https://react.ailesgroup.com/documents/${selectedRow.image}`} alt={selectedRow.merchant} />
                                             </div>
-                                        
                                     </div>
                                 </div>
             </>
